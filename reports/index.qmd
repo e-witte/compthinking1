@@ -1,0 +1,22 @@
+---
+title: "CompThinking1"
+subtitle: "Assessment"
+execute:
+  echo: false
+  ---
+  
+```Q1
+
+species_codes <- data.frame(c("GREG", "MALL", "MAWR", "KILL"), c( "Great Egret", "Mallard", "Marsh Wren", "Killdeer"))
+
+colnames(species_codes) <- c("shorthand", "commonname")
+
+sightings = c("GREG", "GREG", "MALL", "MAWR", "KILL", "GREG")
+
+library(qdapTools)
+sightings <- lookup(sightings, species_codes$shorthand, species_codes$commonname)
+
+table(sightings)
+```
+
+```Q2
