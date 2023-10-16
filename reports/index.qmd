@@ -19,4 +19,33 @@ sightings <- lookup(sightings, species_codes$shorthand, species_codes$commonname
 table(sightings)
 ```
 
-```Q2
+``` Porifera Q2
+
+bird_mass_g <- c(100.1, 99.2, 99.3, NA, 100.0, 101.5, 94.7, 99.2, 108.2) 
+mean_mass <- mean(bird_mass_g)
+sd_mass <- sd(bird_mass_g)
+is_outlier <- bird_mass_g > mean_mass + 3 * sd_mass
+num_outliers <- sum(is_outlier)
+
+#In this code, we make a list of masses (line 24), calculate mean and standard deviation(25 & 26), set a condition for outliers (27) and counts the outliers (28)
+
+#errors: line 25 does not calculate mean due to NA, so mean(bird_mass_g, na.rm= TRUE); line 26 does not calculate sd due to NA, so sd(bird_mass_g, na.rm= TRUE); line 28 same.
+
+#bird_mass_g is numeric; is_outlier is logical, num_outliers is an integer
+```
+
+``` Q3
+
+quad_counts <- c(2L, 19L, 4L, 5L, 5L, 12L, 0L, 7L)
+valid_quads <- c(1, 2, 3, 5, 7)
+quad_counts2 <- quad_counts[valid_quads]
+median_count <- median(quad_counts2)
+
+# I may not be understanding the question... for '5L' to be the median, you need more numbers higher, so change 0L to 6L?
+
+```
+
+
+
+
+
